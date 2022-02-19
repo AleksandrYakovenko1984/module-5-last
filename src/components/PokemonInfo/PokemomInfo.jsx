@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import PokemonDataView from "./PokemonData";
+import PokemonError from "./PokemonErrorView";
+
 export default class PokemonInfo extends Component {
   state = {
     pokemon: null,
@@ -36,7 +38,7 @@ export default class PokemonInfo extends Component {
       return <div>загружаем...</div>;
     }
     if (status === "rejected") {
-      return <h1>{error.message}</h1>;
+      return <PokemonError message={error.message} />;
     }
     if (status === "resolved") {
       return <PokemonDataView pokemon={pokemon} />;

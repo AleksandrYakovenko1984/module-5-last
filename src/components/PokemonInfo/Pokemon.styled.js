@@ -10,3 +10,11 @@ export const PokemonBtn = styled.button`
   width: 70px;
   height: 25px;
 `;
+export const Cont = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+export const MessageError = styled.p`
+  font-weight: bold;
+  color: red;
+`;
